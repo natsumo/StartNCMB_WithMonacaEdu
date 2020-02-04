@@ -20,8 +20,8 @@ class: impact
 .left[
 .size_small_7[
 Copyright 2020 FUJITSU CLOUD TECHNOLOGIES LIMITED<br>
-Created by Natsumo Ikeda
-2020/02/04 Update
+Created by Natsumo Ikeda<br>
+2020/02/04
 ]
 ]
 ]
