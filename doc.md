@@ -21,7 +21,7 @@ class: impact
 .size_small_7[
 Copyright 2020 FUJITSU CLOUD TECHNOLOGIES LIMITED<br>
 Created by Natsumo Ikeda
-2020/01/27 Update
+2020/02/04 Update
 ]
 ]
 ]
@@ -54,7 +54,7 @@ title: はじめに
 
 ## アジェンダ
 
-.size_small_9[
+.size_small_7[
 1. mobile backend って何？
 1. mobile backend を手っ取り早く使うには
 1. 実際に触ってみましょう①
@@ -65,7 +65,8 @@ title: はじめに
   1. mobile backend にデータを保存する
 1. 実際に触ってみましょう②
   1. mobile backend に保存したデータを取得する
-1. まとめ
+1. （おまけ）おみくじアプリを作ってみましょう
+1. おわりに
 ]
 .bottom-bar[
 {{title}}
@@ -536,15 +537,15 @@ title: 3.&nbsp;実際に触ってみましょう①
 
 ### 3. mobile backend の準備
 
-★ここから
 .size_small_9[
-**mobile backend にデータが保存されるボタン** を作るために、ここからは mobile backend 側の準備をしていきましょう。まずはアカウントを用意します。「無料登録」をクリックします。
+mobile backend にログインします。
 ]
-.center[<img src="image/Monaca20.png" alt="Monaca20.png" width="730px">]
+.center[<img src="image/Monaca20.png" alt="Monaca20.png" width="650px">]
 
-__<a href='https://mbaas.nifcloud.com/' target='_blank'>mbaas.nifcloud.com&nbsp;↗️</a>__
-
-https://console.mbaas.nifcloud.com/login
+.size_small_7[
+__<a href='https://mbaas.nifcloud.com/' target='_blank'>ニフクラ&nbsp;mobile&nbsp;backend&nbsp;トップページ&nbsp;↗️</a>__<br>
+`https://mbaas.nifcloud.com/`
+]
 .bottom-bar[
 {{title}}
 ]
@@ -554,733 +555,1043 @@ title: 3.&nbsp;実際に触ってみましょう①
 
 ### 3. mobile backend の準備
 
-
-
-**無料** で利用するには SNSアカウント で会員登録を行います。
-
-.center[<img src="image/Monaca21.png" alt="Monaca21.png" width="600px">]
-
-利用可能なSNSアカウント
-* Facebook
-* Twitter
-* Google (Gmail)
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+.size_small_9[
+ログインすると、「アプリの新規作成」画面が表示されます。`TestApp` と入力して、「新規作成」をクリックします。
 ]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-
-.center[<img src="image/Monaca22.png" alt="Monaca22.png" width="400px">]
-
-.size_small_7[
-＜いずれのアカウントも所持していない場合＞<br>いずれも無料で作成可能ですが、Googleアカウント（Gmail）がおすすめです。<br><a href='https://accounts.google.com/signup' target='_blank'>Googleアカウントの作成</a>
-]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-認証処理が完了すると、メールアドレスの登録画面が表示されます。メールアドレスを入力して「確認メールを送信」をクリックします。
-
-.center[<img src="image/Monaca23.png" alt="Monaca23.png" width="400px">]
-
-確認メールが届くので指示に従って会員登録を進めてください。
-
-.size_small_7[
-※このメールアドレスはSNSアカウントとは別に、自由に設定できます。
-]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-会員登録が完了したらログインをします。
-
-.center[<img src="image/Monaca30.png" alt="Monaca30.png" width="750px">]
-
-<a href='https://mbaas.nifcloud.com/' target='_blank'>mbaas.nifcloud.com</a>
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-会員登録をする際に使用した SNSアカウント を選択します。
-
-.center[<img src="image/Monaca31.png" alt="Monaca31.png" width="400px">]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-初回のみ利用規約に同意が必要です。内容を確認したらチェックを入れ、 「アカウント登録」をクリックします。
-
-.center[<img src="image/Monaca32.png" alt="Monaca32.png" width="400px">]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
----
-#### 3. mobile backend の準備
-
-ログインが完了すると、「アプリの新規作成」画面が表示されます。作成するアプリ単位で、mobile backend 上にもアプリを作成します。<br>「TestApp」と入力して、「新規作成」をクリックしましょう。
-
 .center[<img src="image/Monaca33.png" alt="Monaca33.png" width="400px">]
-
-.left-column[
+<br><br>
 .size_small_7[
-.right[
-＜利用がはじめてではない場合＞<br>既にアプリを作成している場合は、<br>改めてアプリを作成します。
+✅作成するスマートフォンアプリ毎に、mobile backend 上にも「 **アプリ** 」を作成します。
 ]
-]
-]
-
-.right-column[
-<img src="image/Monaca34.png" alt="Monaca34.png" width="100px">
-]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 3. mobile backend の準備
+title: 3.&nbsp;実際に触ってみましょう①
+
+### 3. mobile backend の準備
 
 アプリが作成されると、 **APIキー** が発行されます。後ほど使用します。一旦「OK」をクリックして画面を閉じます。
 
+.col-6[
 .center[<img src="image/Monaca35.png" alt="Monaca35.png" width="400px">]
-
+]
+.col-6[
 .size_small_7[
-（参考）APIキーは２種類
+✅ **APIキーは２種類**
 * アプリケーションキー
-  * アプリを特定するためのキー（ユニークキー）
+  * アプリを特定するためのキー（住所のような物）
 * クライアントキー
   * 認証キー
 ]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
 ]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 3. mobile backend の準備
+title: 3.&nbsp;実際に触ってみましょう①
 
+### 3. mobile backend の準備
+
+.size_small_9[
 管理画面のダッシュボードが表示されます。
+]
 
 .center[<img src="image/Monaca36.png" alt="Monaca36.png" width="750px">]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 3. mobile backend の準備
+title: 3.&nbsp;実際に触ってみましょう①
 
-文字列データは「データストア」に保存されます。（この後使っていきます。）
+### 3. mobile backend の準備
 
-.center[<img src="image/Monaca37.png" alt="Monaca37.png" width="750px">]
-
+.size_small_9[
+これから保存するデータ（文字列）は「 **データストア** 」に保存されます。
+]
+.col-8[
+.center[<img src="image/Monaca37.png" alt="Monaca37.png" width="700px">]
+]
+.col-4[
 .size_small_7[
-（参考）デフォルトクラス：
+✅「データストア」が mobile backend 　　の「クラウドデータベース」です<br><br>
+✅ デフォルトクラス：
 * installation
   * プッシュ通知配信端末情報が格納されるクラス
 * role
   * 会員管理で設定した会員グループが格納されるクラス
 ]
+]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
+title: 3.&nbsp;実際に触ってみましょう①
 
-いよいよ **mobile backend にデータを保存する処理** を実装していきます。<br>
-Monaca に戻って、図の手順で実装していきます。
+### 4. mobile backend と Monaca を連携する
 
-.center[<img src="image/Monaca40.png" alt="Monaca40.png" width="750px">]
+**mobile backend にデータを保存する処理** を実装するために、mobile backend と Monaca を連携させるために必要な作業をします。
 
-.right_under[
+1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
+1. 導入した SDK を初期化（おまじない）して使える状態にする .size_small_5[（コーディング）]
+1. 「Hello, NCMB!」と mobile backend に保存する処理を実装する .size_small_5[（コーディング）]
+<br><br><br><br><br><br><br>
+
 .size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+✅この２つは mobile backend を使用する場合に .color_pink[**必ず実施する内容**] です。覚えておきましょう！
 ]
-]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
+.col-7[
+.size_small_9[
+Monaca の画面に戻ります。<br>
 「設定」＞「JS/CSSコンポーネントの追加と削除」をクリックします。
-
+]
+]
+.col-5[
 .center[<img src="image/add_sdk01.png" alt="add_sdk01.png" width="230px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
 ]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
-「コンポーネント名」に「 **ncmb** 」と入力して「検索する」をクリックします。
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
 
+.size_small_9[
+「コンポーネント名」に `ncmb` と入力して「検索する」をクリックします。
+]
 .center[<img src="image/add_sdk02.png" alt="add_sdk02.png" width="700px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
+
+.size_small_9[
 mobile backend のSDK「ncmb」が表示されるので「追加」をクリックします。
-
+]
 .center[<img src="image/add_sdk03.png" alt="add_sdk03.png" width="700px">]
 
+<br><br><br><br><br><br>
 
-.right_under[
 .size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+✅「ncmb」は 「**N** IF **C** LOUD **m** obile **b** ackend」の頭文字です。
 ]
-]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
-バージョンはそのままで、「インストール」をクリックします。
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
 
+.size_small_9[
+バージョンはそのまま（最新版）で、「インストール」をクリックします。
+]
 .center[<img src="image/add_sdk04.png" alt="add_sdk04.png" width="600px">]
 
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
-必ずチェックボックスにチェックを入れてください。「保存」をクリックします。
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
+.col-6[
+.size_small_9[
+必ずチェックボックスにチェックを入れて、「保存」をクリックします。
+]
+.size_small_7[
+✅チェックをしないと SDK の実態が導入されません。
+]
 
+]
+.col-6[
 .center[<img src="image/add_sdk05.png" alt="add_sdk05.png" width="500px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
 ]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.1. mobile backend のSDKを導入する（コンポーネントの追加）
+title: 3.&nbsp;実際に触ってみましょう①
 
+### 4. mobile backend と Monaca を連携する
+#### 1. mobile backend の SDK を Monaca に導入する .size_small_5[（コンポーネントの追加）]
+
+.col-5[
+.size_small_9[
 一覧に「ncmb」が表示されればSDK導入完了です。
 
-.center[<img src="image/add_sdk06.png" alt="add_sdk06.png" width="700px">]
-
-
-.right_under[
 .size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+✅「JS/CSSコンポーネントの追加と削除」タブは閉じておきましょう。
+]
+
 ]
 ]
+.col-7[
+.center[<img src="image/add_sdk06.png" alt="add_sdk06.png" width="600px">]
+]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.2. 導入したSDKを初期化する
+title: 3.&nbsp;実際に触ってみましょう①
 
-SDKは使う前に必ず初期化をする必要があります。初期化には mobile backend でアプリ作成時に発行された  **APIキー** を使います。まずは変数としてAPIキーの置き場を用意しましょう。
+### 4. mobile backend と Monaca を連携する
+#### 2. 導入した SDK を初期化（おまじない）して使える状態にする .size_small_5[（コーディング）]
 
-.center[<img src="image/Monaca41.png" alt="Monaca41.png" width="700px">]
+.size_small_9[
+SDKは使う前に必ず初期化（おまじない）をする必要があります。初期化には mobile backend でアプリ作成時に発行された  **APIキー** を使います。<br>
+Monaca （index.html）を開き、APIキーの置き場を用意します。
+]
 
-
-.right_under[
+.col-6[
+.size_small_5[
+コーディングする内容：<br>
+]
 .size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+```js
+var applicationKey = "";
+var clientKey = "";
+```
+]
+.size_small_5[
+（参考）scriptタグ内の現状：<br>
+<img src="image/Monaca40.png" alt="Monaca40.png" width="350px">
 ]
 ]
+.col-6[
+.size_small_5[
+出来上がりイメージ：<br>
+<img src="image/Monaca41.png" alt="Monaca41.png" width="550px">
+]
+]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 4. mobile backend と Monaca を連携する
-##### 4.2. 導入したSDKを初期化する
+title: 3.&nbsp;実際に触ってみましょう①
 
-mobile backend の管理画面を開いて、APIキーを確認します。APIキーは「アプリ設定」にあります。コピーボタンを使ってそれぞれ変数に代入しましょう。
+### 4. mobile backend と Monaca を連携する
+#### 2. 導入した SDK を初期化（おまじない）して使える状態にする .size_small_5[（コーディング）]
 
-.center[<img src="image/Monaca42.png" alt="Monaca42.png" width="700px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+.col-5[
+.size_small_9[
+mobile backend の管理画面を開いて、APIキーを確認します。<br>
+APIキーは「アプリ設定」にあります。
 ]
 ]
+.col-7[
+.center[<img src="image/Monaca42.png" alt="Monaca42.png" width="600px">]
 ]
-
-
----
-#### 4. mobile backend と Monaca を連携する
-##### 4.2. 導入したSDKを初期化する
-
-貼り付け終わるとこんな感じです。
-
-.center[<img src="image/Monaca43.png" alt="Monaca43.png" width="750px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
-
----
-#### 4. mobile backend と Monaca を連携する
-##### 4.2. 導入したSDKを初期化する
-
-APIキーを引数に設定して以下のように書くとSDKが初期化されます。
-
-.center[<img src="image/Monaca44.png" alt="Monaca44.png" width="750px">]
-
-.size_small_7[
-（参考）4.1. と 4.2. は mobile backend を使う際、必ず必要な作業です。覚えておきましょう。
-]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
-]
-
-
----
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
-
-連携ができたので、あとは保存のコードを `addData()` メソッド内に記述していきます。
-
-.center[<img src="image/Monaca50.png" alt="Monaca50.png" width="700px">]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
+title: 3.&nbsp;実際に触ってみましょう①
 
-保存先クラスを作ります。クラス名は「TestClass」としておきましょう。
+### 4. mobile backend と Monaca を連携する
+#### 2. 導入した SDK を初期化（おまじない）して使える状態にする .size_small_5[（コーディング）]
 
-.center[<img src="image/Monaca51.png" alt="Monaca51.png" width="700px">]
-
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.size_small_9[
+それぞれ「コピーボタン」を使ってコピーを取り先ほど用意した `""` の間に貼り付けます。
 ]
 
----
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
-
-クラスのインスタンスを生成します。
-
-.center[<img src="image/Monaca52.png" alt="Monaca52.png" width="680px">]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+.col-5[
+.size_small_5[
+APIキーをコピーする：
 ]
+<img src="image/Monaca42-2.png" alt="Monaca42-2.png" width="400px">
+
 ]
+.col-7[
+.size_small_5[
+出来上がりイメージ：
+]
+<img src="image/Monaca43.png" alt="Monaca43.png" width="650px">
+]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
+title: 3.&nbsp;実際に触ってみましょう①
 
-インスタンスに値をセットします。フィールド名を「message」、値を「Hello, NCMB!」としましょう。
+### 4. mobile backend と Monaca を連携する
+#### 2. 導入した SDK を初期化（おまじない）して使える状態にする .size_small_5[（コーディング）]
 
-.center[<img src="image/Monaca53.png" alt="Monaca53.png" width="680px">]
+.size_small_9[
+APIキーを **引数** に設定して以下のように書くとSDKが初期化されます。<br>
+]
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+var ncmb = new NCMB(applicationKey, clientKey);
+```
+]
+.size_small_5[
+出来上がりイメージ：
+]
+<img src="image/Monaca44.png" alt="Monaca44.png" width="650px">
 
-* `.set('key', 'value')` ：値の設定
+.size_small_5[
+✅初期化作業はおまじないのようなものです。毎回必ず実施する作業として覚えておきましょう。<br>
+✅引数とは、プログラムや関数に渡される値のことです。ここではSDKの初期化にAPIキーを使うため引数として値を渡しています。
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: 3.&nbsp;実際に触ってみましょう①
+
+### 5. mobile backend にデータを保存する
+
+.size_small_9[
+連携ができたので、あとは保存処理のコードを `addData()` メソッド内に記述すれば完成です。<br>
+最初に保存先クラスを作ります。クラス名は `TestClass` としておきましょう。
+]
+.col-6[
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+var TestClass = ncmb.DataStore("TestClass");
+```
+]
+.size_small_5[
+（参考） `addData()` メソッド：
+]
+<img src="image/Monaca50.png" alt="Monaca50.png" width="500px">
+]
+.col-6[
+.size_small_5[
+出来上がりイメージ：
+]
+<img src="image/Monaca51.png" alt="Monaca51.png" width="550px">
+]
+.bottom-bar[
+{{title}}
+]
+
+---
+title: 3.&nbsp;実際に触ってみましょう①
+
+### 5. mobile backend にデータを保存する
+
+.size_small_9[
+次にクラス `TestClass` のインスタンスを生成します。
+]
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+var testClass = new TestClass();
+```
+]
+.size_small_5[
+出来上がりイメージ：
+]
+
+<img src="image/Monaca52.png" alt="Monaca52.png" width="680px">
+
+.size_small_5[
+✅インスタンスとは、「実体」を表します。ここではデータを保存するためクラスの実体としてのインスタンスに値を格納します。
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: 3.&nbsp;実際に触ってみましょう①
+
+### 5. mobile backend にデータを保存する
+
+.size_small_9[
+インスタンスに保存する値をセットします。フィールド名を `message` 、値を `Hello, NCMB!` とします。
+]
+.col-5[
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+testClass.set("message", "Hello, NCMB!")
+```
+]
+]
+.col-7[
+.size_small_5[
+出来上がりイメージ：
+]
+.center[<img src="image/Monaca53.png" alt="Monaca53.png" width="550px">]
+]
+<br><br><br><br><br><br>
+.size_small_5[
+* `.set("key", "value")` ：値の設定
   * key: フィールド名
   * value: 値
-
-.size_small_7[
-（参考）クラス名やフィールド名について<br>
-クラス名／フィールド名は無ければ新規作成してくれるし、既に存在しているならば既存のクラス／フィールドを指定してくれます。（存在有無を気にする必要がないので楽ですね👏）
+]
+.size_small_5[
+✅クラス名やフィールド名<br>
+クラス名／フィールド名は無ければ新規作成してくれるし、既に存在しているならば既存のクラス／フィールドを指定してくれます。<br>
+存在有無を気にする必要がないので楽ですね👏
 ]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
+title: 3.&nbsp;実際に触ってみましょう①
 
+### 5. mobile backend にデータを保存する
+
+.size_small_9[
 値を設定したら保存します。JavaScriptなので、メソッドチェーンで書けます。
-
-.center[<img src="image/Monaca54.png" alt="Monaca54.png" width="680px">]
-
-* `.save()` ：保存
-
-実装は以上です。
-
-.right_under[
+]
+.col-5[
+.size_small_5[
+コーディングする内（２行目）：
+]
 .size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+```js
+testClass.set("message", "Hello, NCMB!")
+         .save();
+```
 ]
 ]
+.col-7[
+.size_small_5[
+出来上がりイメージ：
+]
+.center[<img src="image/Monaca54.png" alt="Monaca54.png" width="550px">]
+]
+<br><br><br><br><br><br>
+.size_small_5[
+* `.save()` ：保存
+]
+.size_small_5[
+✅メソッドチェーンとは、`.` で続けて処理メソッドを記述するJavaScriptの作法です。 `set` と `save` を繋げて１文で記述できます。<br>
+　　（文末に記述する `;` は最後に１つだけ。 `set` の後ろにはない。）
+]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
+title: 3.&nbsp;実際に触ってみましょう①
 
-動作確認をしてみましょう。プロジェクトを保存して、プレビュー画面からボタンを押してみましょう。
+### 5. mobile backend にデータを保存する
 
+.size_small_9[
+動作確認をしてみましょう。プロジェクトを保存して、プレビュー画面からボタンを押します。
+]
 .center[<img src="image/Monaca55.png" alt="Monaca55.png" width="750px">]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 5. mobile backend にデータを保存する
-##### 5.1. mobile backend に「Hello, NCMB!」と保存する
+title: 3.&nbsp;実際に触ってみましょう①
 
-mobile backend 上に正しくデータが保存されたか確認してみましょう。<br>「データストア」を開くと、新しく「TestClass」ができています。クリックすると保存されたデータが確認できます。
+### 5. mobile backend にデータを保存する
 
-.center[<img src="image/Monaca56.png" alt="Monaca56.png" width="700px">]
-
-.size_small_7[
-（TRY）Monacaのプレビュー画面に戻ってボタンを何度か押してから改めて TestClass を確認してみましょう😘
+.size_small_9[
+mobile backend 上に正しくデータが保存されたか確認してみましょう。「データストア」を開くと、新しく「TestClass」ができています。クリックすると保存されたデータが確認できます。
 ]
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-3.実際に触ってみましょう①
+.col-8[
+.center[<img src="image/Monaca56.png" alt="Monaca56.png" width="650px">]
+]
+.col-4[
+.size_small_5[
+✅ **TRY** <br>Monacaのプレビュー画面に戻ってボタンを何度か押してから改めて TestClass を確認してみましょう😘
 ]
 ]
+.bottom-bar[
+{{title}}
 ]
+
 
 ---
+title: 4.&nbsp;実際に触ってみましょう②
 layout: true
-class: center, middle, inverse_sub
----
-## 4. 実際に触ってみましょう②
-
-.right[<img src="image/takano.png" alt="takano.png" width="150px">]
+class: center, middle, animation-fade
 
 ---
+# {{title}}
+
+---
+title: 4.&nbsp;実際に触ってみましょう②
 layout: false
-### 4. 実際に触ってみましょう②
+
+## 4.&nbsp;実際に触ってみましょう②
 
 1. mobile backend に保存したデータを取得する
 
-ボタンを押すと「今何件 mobile backend 上にデータが保存されているか」を取得して画面に表示するようにしてみましょう👀
+.bottom-bar[
+{{title}}
+]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-`body` タグ内に新しいボタンと取得した件数を表示するための `div` タグを用意しましょう。ボタンが押されたら呼び出される `function` 名は「 `countData()` 」としましょう。また、 `div` タグには `id` を付けておきましょう。「 `counter` 」としましょう。
+### 1. mobile backend に保存したデータを取得する
 
-.center[<img src="image/Monaca60.png" alt="Monaca60.png" width="600px">]
+.size_small_9[
+新しいボタン「押してみて2」を押すと **mobile backend 上にデータが何件保存されているか** を取得して画面に表示するようにしてみましょう👀
+]
+.size_small_5[
+完成イメージ：
+]
+<img src="image/Monaca60-2.png" alt="Monaca60-2.png" width="400px">
 
+.bottom-bar[
+{{title}}
+]
 
-.right_under[
+---
+title: 4.&nbsp;実際に触ってみましょう②
+
+### 1. mobile backend に保存したデータを取得する
+
+.size_small_9[
+Monaca（index.html）を開きます。<br>
+`body` タグ内に **新しいボタン** と取得した件数を表示するための `div` タグを用意します。
+]
 .size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+ボタンが押されたら呼び出される function は「 `countData()` 」としましょう。<br>
+また、 `div` タグには `id` を付けておきましょう。「 `counter` 」としましょう。
 ]
+.size_small_5[
+コーディングする内容：
 ]
-]
-
----
-#### 1. mobile backend に保存したデータを取得する
-
-**mobile backend に保存したデータの件数を取得する処理** を書く `function` 「 `countData()` 」を用意しましょう。
-
-.center[<img src="image/Monaca61.png" alt="Monaca61.png" width="750px">]
-
-.right_under[
 .size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+```html
+<button onclick="countData()">押してみて2</button>
+<div id="counter"></div>
+```
 ]
+.size_small_5[
+完成イメージ：
 ]
+<img src="image/Monaca60.png" alt="Monaca60.png" width="500px">
+
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-**mobile backend に保存したデータの件数を取得する処理** を実装していきます。保存先クラスの指定をしますが、 3.5.1.でデータを保存したクラスと同じクラスを指定すればいいので、コードを共有します。 `function` の外に出してフィールド変数にします。
+### 1. mobile backend に保存したデータを取得する
 
-.center[<img src="image/Monaca62.png" alt="Monaca62.png" width="750px">]
-
-
-.right_under[
+.size_small_9[
+**mobile backend に保存したデータの件数を取得する処理** を書くfunction「 `countData()` 」を用意しましょう。
+]
+.col-5[
+.size_small_5[
+コーディングする内容：
+]
 .size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+```js
+function countData() {
+
+}
+```
 ]
 ]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
+.center[<img src="image/Monaca61.png" alt="Monaca61.png" width="600px">]
+]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-データを取得するにはクラスに対して検索処理を行います。保存件数を取得をしたいので、検索条件を以下のように指定します。
+### 1. mobile backend に保存したデータを取得する
+.size_small_9[
+**mobile backend に保存したデータの件数を取得する処理** を実装していきます。<br>
+保存先クラスは、先ほどと同じクラスを使うのでコードを共有します。保存先クラスの生成コードをfunctionの外に出して **フィールド変数** にします。
+]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
+.center[<img src="image/Monaca62.png" alt="Monaca62.png" width="600px">]
+]
+.col-5[
+.size_small_5[
+```js
+var TestClass = ncmb.DataStore("TestClass");
+```
+を選択して「切り取り」、function の外で「貼り付け」します。
+<br><br><br><br><br><br><br><br><br><br><br><br>
+✅functionの中の変数は同じfunctionの中からのみ利用可能です。<br>フィールドの変数にする事で他のfunctionからも利用できるすることができます。
 
-.center[<img src="image/Monaca63.png" alt="Monaca63.png" width="600px">]
+]
+]
 
+.bottom-bar[
+{{title}}
+]
+
+---
+title: 4.&nbsp;実際に触ってみましょう②
+
+### 1. mobile backend に保存したデータを取得する
+
+.size_small_9[
+データを取得するにはクラスに対して検索処理を行います。<br>
+保存件数を取得するには `count()` オプションを使います。
+]
+.col-5[
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+TestClass.count()
+```
 * `.count()`：件数を指定
+]
+]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
+.center[<img src="image/Monaca63.png" alt="Monaca63.png" width="600px">]
+]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
-]
-]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-全件数を取得したいので、全件検索処理を実行します。
+### 1. mobile backend に保存したデータを取得する
 
-.center[<img src="image/Monaca64.png" alt="Monaca64.png" width="600px">]
-
+.size_small_9[
+全件数を取得したいので、全件検索処理 `fetchAll()` を実行します。
+]
+.col-5[
+.size_small_5[
+コーディングする内容（２行目）：
+]
+.size_small_7[
+```js
+TestClass.count()
+         .fetchAll()
+```
 * `.fetchAll()`：全件検索処理
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
 ]
 ]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
+.center[<img src="image/Monaca64.png" alt="Monaca64.png" width="600px">]
+]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-コールバックを設定します。返り値をそれぞれ、成功時： `results` 、失敗時： `error` としましょう。
+### 1. mobile backend に保存したデータを取得する
 
-.center[<img src="image/Monaca65.png" alt="Monaca65.png" width="600px">]
+.size_small_9[
+コールバック関数を設定します。<br>
+返却値をそれぞれ、成功時： `results` 、失敗時： `error` とします。
+]
+.col-5[
+.size_small_5[
+コーディングする内容（３行目以降）：
+]
+.size_small_7[
+```js
+TestClass.count()
+         .fetchAll()
+         .then(function(results){
 
+         })
+         .catch(function(error){
+
+         });
+```
 * `.then()`：検索成功時の処理
 * `.catch()`：検索失敗時の処理
+]
+]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
+.center[<img src="image/Monaca65.png" alt="Monaca65.png" width="600px">]
+]
+.size_small_5[
+✅ コールバック関数とは、mobile backend に対して処理を実行した際呼ばれる関数で、成功・失それぞれ違う関数が呼ばれます。
+]
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-検索取得に成功すると、返り値として件数の情報が取得できます。ここでは「`results.count`」で取得できます。変数化しておきましょう。
+### 1. mobile backend に保存したデータを取得する
 
+.size_small_9[
+検索取得に成功すると、返却値から件数の情報を取得できます。ここでは `results.count` で取得できます。
+]
+.col-5[
+.size_small_5[
+コーディングする内容：
+]
+.size_small_7[
+```js
+var num = results.count;
+```
+*  `[返却値].count` ：件数の取得
+]
+]
+.col-7[
+.size_small_5[
+完成イメージ：
+]
 .center[<img src="image/Monaca66.png" alt="Monaca66.png" width="580px">]
-
-* 返り値 `.count` ：件数の取得
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
 ]
-]
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
+### 1. mobile backend に保存したデータを取得する
+.size_small_9[
 先ほど作った `div` タグに件数を表示しましょう。
-
-.center[<img src="image/Monaca67.png" alt="Monaca67.png" width="650px">]
-
-
-.right_under[
+]
+.size_small_5[
+コーディングする内容：
+]
 .size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+```js
+document.getElementById("counter").innerHTML = num;
+```
 ]
+.size_small_5[
+完成イメージ：
 ]
+<img src="image/Monaca67.png" alt="Monaca67.png" width="700px">
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-（参考）検索処理失敗時は `alert` でエラーを表示するようにしておくと便利です☝️
-
-.center[<img src="image/Monaca68.png" alt="Monaca68.png" width="650px">]
-
-
-.right_under[
+### 1. mobile backend に保存したデータを取得する
+.size_small_9[  
+検索取得に失敗した場合は `alert` でエラーを表示するようにしておきましょう☝️
+]
+.size_small_5[
+コーディングする内容：
+]
 .size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+```js
+alert("Error: " + error);
+```
 ]
+.size_small_5[
+完成イメージ：
 ]
+<img src="image/Monaca68.png" alt="Monaca68.png" width="700px">
+
+
+.bottom-bar[
+{{title}}
 ]
 
 ---
-#### 1. mobile backend に保存したデータを取得する
+title: 4.&nbsp;実際に触ってみましょう②
 
-動作確認をしてみましょう。プロジェクトを保存して、プレビュー画面からボタンを押してみましょう。
+### 1. mobile backend に保存したデータを取得する
 
-.center[<img src="image/Monaca69.png" alt="Monaca69.png" width="700px">]
-
-
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
+.size_small_9[
+動作確認をしてみましょう。<br>
+プロジェクトを保存して、プレビュー画面からボタンを押してみましょう。
 ]
-]
-]
-
----
-#### 1. mobile backend に保存したデータを取得する
-
-件数が表示されれば取得成功です！mobile backend の管理画面を確認して、実際の件数と一致しているか確認してみましょう😄
-
-.center[<img src="image/Monaca70.png" alt="Monaca70.png" width="200px">]
-
-.size_small_7[
-（TRY）最初に作ったボタンを何回か押してから、取得するボタンを押してみましょう。件数の変化がわかります😉
-]
+.center[<img src="image/Monaca69.png" alt="Monaca69.png" width="750px">]
 
 
-.right_under[
-.size_small_7[
-.font_color_ncmb_blue[
-4.実際に触ってみましょう②
-]
-]
+.bottom-bar[
+{{title}}
 ]
 
 ---
+title: 4.&nbsp;実際に触ってみましょう②
+
+### 1. mobile backend に保存したデータを取得する
+
+.size_small_9[
+件数が表示されれば取得成功です！<br>
+mobile backend の管理画面を確認して、実際の件数と一致しているか確認してみましょう😄
+]
+.center[<img src="image/Monaca70.png" alt="Monaca70.png" width="500px">]
+<br><br><br><br>
+.size_small_5[
+✅ **TRY** <br>
+最初に作った「押してみて」ボタンを何回か押してから、「押してみて2」ボタンを押してみましょう。件数の変化がわかります😉
+]
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）<br>おみくじアプリを作ってみましょう
 layout: true
-class: center, middle, inverse_sub
----
-## まとめ
-
-.right[<img src="image/takano.png" alt="takano.png" width="150px">]
+class: center, middle, animation-fade
 
 ---
+# {{title}}
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
 layout: false
 
-### まとめ
+## おみくじアプリ
 
-お疲れ様でした💪<br><br>短い時間のセミナーですが、mobile backen の使い方の基本が理解いただけたのではないかなと思います。<br><br>本セミナーの内容は参考書「 .font_color_ncmb_blue[**Monaca と ニフクラ mobile backend で学ぶ はじめてのプログラミング ～クラウド連携アプリ開発編～**] 」にも掲載している内容です。「mobile backend ってどんな感じで使えるサービスなんだろう？」という疑問を解消して、参考書を開いていただくための足掛かりになれれば幸いです🙏<br><br>ぜひ皆様のアプリ開発に mobile backend をお役立てください👍👍
+.size_small_9[
+おみくじアプリを作ってみましょう。手順は以下です。
+
+1. おみくじデータを mobile backend に作成する（管理画面から保存）
+2. ボタンを押すとおみくじの結果が表示される
+]
+.center[<img src="image/omake01.png" alt="omake01.png" width="500px">]
+
+<br><br><br><br>
+.size_small_5[
+✅2.はここまで学習した内容の復習です！頑張って完成させてみましょう！
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### おみくじデータを mobile backend に作成する（管理画面から保存）
+
+.size_small_9[
+mobile backend に新しいアプリ「 **Omikuji** 」を作成し、データストアを開きます。<br>
+「＋作成▼」＞「新規作成」をクリックします。
+]
+.center[<img src="image/omake02.png" alt="omake02.png" width="500px">]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### おみくじデータを mobile backend に作成する（管理画面から保存）
+
+.size_small_9[
+クラス名も「 **Omikuji** 」にしましょう。入力したら「作成する」をクリックします。
+]
+.center[<img src="image/omake03.png" alt="omake03.png" width="500px">]
+
+<br><br><br><br>
+.size_small_5[
+✅クラス名を間違えると正しくおみくじが動かないので注意！
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### おみくじデータを mobile backend に作成する（管理画面から保存）
+
+.size_small_9[
+クラスが作成されたらデータを作っていきます。<br>
+上部にある「＋新しいフィールド」をクリックします。フィールド名を「`result`」（おみくじを引いたときの”結果”の意味）にしましょう。<br>
+フィールドができたらデータを入れるレコードを作ります。「＋新しいレコード」をクリックすると次のようになります。
+]
+.center[<img src="image/omake04.png" alt="omake04.png" width="900px">]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### おみくじデータを mobile backend に作成する（管理画面から保存）
+
+.size_small_9[
+`result`に値を入れてみます。「大吉」を入れましょう。ダブルクリックすると入力できるようになります。
+]
+.center[<img src="image/omake05.png" alt="omake05.png" width="500px">]
+
+.size_small_9[
+「大吉」と書いて「Enter」キーを押すとデータが作成されます。
+]
+.center[<img src="image/omake06.png" alt="omake06.png" width="900px">]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### おみくじデータを mobile backend に作成する（管理画面から保存）
+
+.size_small_9[
+同様にしてフィールドを追加し、「中吉」「小吉」「吉」「凶」「大凶」などなど入れてみましょう。いくつでも、何を書いてもOKです！
+]
+.center[<img src="image/omake07.png" alt="omake07.png" width="900px">]
+
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: （おまけ）おみくじアプリを作ってみましょう
+
+### ボタンを押すとおみくじの結果が表示される
+
+.size_small_9[
+次の手順で実装していきましょう。
+]
+.col-7[
+.size_small_7[
+1. Monaca に新しくアプリ（最小限のテンプレート）を作る
+1. Monaca に mobile backend の SDK を導入する
+1. 導入したSDKを初期化する（おまじない）
+1. 次のコードを index.htmlに記述
+]
+]
+.col-5[
+.size_small_4[
+`body` タグ内に記述：
+```html
+<button onclick="omikuji();">おみくじを引く</button>
+結果：<span id="result"></span>
+```
+]
+.size_small_4[
+`script` タグ内に記述：
+```js
+  function omikuji() {
+    var Omikuji = ncmb.DataStore("Omikuji");
+    Omikuji.fetchAll()
+           .then(function(objects){
+             // データ数内で乱数を作成
+             var random = Math.floor(Math.random()*objects.length);
+             // 乱数番目のデータ
+             var object = objects[random];
+             // 「result」フィールドの値を取得
+             var result= object.get("result");
+             // 画面に結果を表示
+             document.getElementById("result").innerText = result;
+          })
+          .catch(function(error){
+             alert("Error: " + error.code);
+          });
+  }
+```
+]
+]
+<br><br><br><br><br><br><br><br><br><br><br><br>
+.size_small_5[
+✅乱数を発生させておみくじの当たりを決めています。取得した値の処理は少し難しいので詳しくは参考書で学習しましょう。
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: おわりに
+layout: true
+class: center, middle, animation-fade
+
+---
+# {{title}}
+
+---
+title: おわりに
+layout: false
+
+## 学習した内容の確認
+
+.size_small_9[
+* 本講座の内容は、参考書 第２章、第３章、第４章の内容の抜粋です
+* 本講座はクラウドデータベースの基礎知識の習得ができるよう構成されています
+* 専門用語や検索取得時のオプション（クエリなど）等については細かく触れていませんので、参考書で追加学習が必要です
+* 参考書で学習を進める際は、第４章までの内容を復習後、第５章より学習を進めていく事をお薦めします
+]
+
+.bottom-bar[
+{{title}}
+]
