@@ -21,7 +21,7 @@ class: impact
 .size_small_7[
 Copyright 2020 FUJITSU CLOUD TECHNOLOGIES LIMITED<br>
 Created by Natsumo Ikeda<br>
-2020/02/04
+2020/02/04&nbsp;(2020/02/18update)
 ]
 ]
 ]
@@ -1582,6 +1582,20 @@ class: center, middle, animation-fade
 ---
 title: おわりに
 layout: false
+
+## まとめ
+
+.size_small_9[
+* クラウドデータベースを活用するとできること
+* クラウドデータベースの基本の使い方
+]
+
+.bottom-bar[
+{{title}}
+]
+
+---
+title: おわりに
 
 ## 学習した内容の確認
 
