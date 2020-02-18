@@ -56,7 +56,7 @@ title: はじめに
 
 .size_small_7[
 1. mobile backend って何？
-1. mobile backend を手っ取り早く使うには
+1. mobile backend を今すぐ使うには
 1. 実際に触ってみましょう①
   1. Monaca の準備
   1. Monaca の練習
@@ -84,7 +84,7 @@ class: center, middle, animation-fade
 title: 1.&nbsp;mobile backend って何？
 layout: false
 
-## 私たちが提供するサービス ニフクラ mobile backend とは何か？
+## ニフクラ mobile backend とは何か？
 
 .col-7[
 .size_small_9[
@@ -110,7 +110,7 @@ layout: false
 ]
 
 ---
-title: 2.&nbsp;mobile backend を手っ取り早く使うには
+title: 2.&nbsp;mobile backend を今すぐ使うには
 layout: true
 class: center, middle, animation-fade
 
@@ -118,10 +118,10 @@ class: center, middle, animation-fade
 # {{title}}
 
 ---
-title: 2.&nbsp;mobile backend を手っ取り早く使うには
+title: 2.&nbsp;mobile backend を今すぐ使うには
 layout: false
 
-## mobile backend を手っ取り早く使うには
+## mobile backend を今すぐ使うには
 
 .size_small_9[
 開発中のアプリがあればそれに組み込むのが一番良いですが、.size_small_7[（AndroidでもiOSでもUnityでも）]<br>
@@ -357,7 +357,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 ```
 
 ]
-.size_small_5[出来上がりイメージ：]<br>
+.size_small_5[完成イメージ：]<br>
 <img src="image/Monaca14-2.png" alt="Monaca14-2.png" width="750px">
 .bottom-bar[
 {{title}}
@@ -392,7 +392,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 <button onclick="">押してみて</button>
 ```
 ]
-.size_small_5[出来上がりイメージ：]<br>
+.size_small_5[完成イメージ：]<br>
 <img src="image/Monaca15.png" alt="Monaca15.png" width="650px">
 
 .bottom-bar[
@@ -404,6 +404,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 
 ### 2. Monaca の練習
 
+
 .size_small_9[
 `""` の間に次のように書いてください。
 
@@ -412,7 +413,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 <button onclick="addData()">押してみて</button>
 ```
 ]
-.size_small_5[出来上がりイメージ：]<br>
+.size_small_5[完成イメージ：]<br>
 
 <img src="image/Monaca16.png" alt="Monaca16.png" width="650px">
 
@@ -454,7 +455,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 
 ### 2. Monaca の練習
 
-.size_small_5[出来上がりイメージ：]<br>
+.size_small_5[完成イメージ：]<br>
 <img src="image/Monaca17.png" alt="Monaca17.png" width="600px">
 
 .bottom-bar[
@@ -491,7 +492,7 @@ title: 3.&nbsp;実際に触ってみましょう①
 
 ### 2. Monaca の練習
 
-.size_small_5[出来上がりイメージ：]<br>
+.size_small_5[完成イメージ：]<br>
 <img src="image/Monaca18.png" alt="Monaca18.png" width="600px">
 
 .bottom-bar[
@@ -791,7 +792,7 @@ var clientKey = "";
 ]
 .col-6[
 .size_small_5[
-出来上がりイメージ：<br>
+完成イメージ：<br>
 <img src="image/Monaca41.png" alt="Monaca41.png" width="550px">
 ]
 ]
@@ -838,7 +839,7 @@ APIキーをコピーする：
 ]
 .col-7[
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 <img src="image/Monaca43.png" alt="Monaca43.png" width="650px">
 ]
@@ -864,7 +865,7 @@ var ncmb = new NCMB(applicationKey, clientKey);
 ```
 ]
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 <img src="image/Monaca44.png" alt="Monaca44.png" width="650px">
 
@@ -902,7 +903,7 @@ var TestClass = ncmb.DataStore("TestClass");
 ]
 .col-6[
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 <img src="image/Monaca51.png" alt="Monaca51.png" width="550px">
 ]
@@ -927,7 +928,7 @@ var testClass = new TestClass();
 ```
 ]
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 
 <img src="image/Monaca52.png" alt="Monaca52.png" width="680px">
@@ -960,7 +961,7 @@ testClass.set("message", "Hello, NCMB!")
 ]
 .col-7[
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 .center[<img src="image/Monaca53.png" alt="Monaca53.png" width="550px">]
 ]
@@ -1001,7 +1002,7 @@ testClass.set("message", "Hello, NCMB!")
 ]
 .col-7[
 .size_small_5[
-出来上がりイメージ：
+完成イメージ：
 ]
 .center[<img src="image/Monaca54.png" alt="Monaca54.png" width="550px">]
 ]
